@@ -17,7 +17,7 @@ int main()
 	int n(0);
 	
 	std::cin >> n;
-	
+	//init a vector of papers.
 	std::vector<papertag> sheets;
 	
 	for(int i = 0; i < n; i++){}
