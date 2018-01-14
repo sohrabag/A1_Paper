@@ -78,6 +78,23 @@ int main()
 	}
 
 	/*
+						Validate Input data whether it is possible to make an
+						A1-SIZE paper, if not give a message "impossible"
+						for that we check if we have envough paper area to make
+						an A1-SIZE paper.
+	*/
+	float validarea(0.0);
+
+	for (std::size_t i = 0; i < sheets.size(); i++) {
+		validarea += sheets[i].area * sheets[i].c;
+	}
+	if (validarea < P_A_1.area)
+	{
+		std::cout << "impossible" << std::endl;
+		return 1;
+	}
+
+	/*
 						calculate the least amount of tape needed to join all 
 						the smaller papers of sizes(A2-A4) to make an A1 paper.
 	*/
@@ -101,7 +118,7 @@ int main()
 			} while (tot_area != P_A_1.area); //check whether we made a A1_SIZE paper?
 			
 			//add the count of paapers to the res vector.
-			res.push_back(c / 2); res[i - 1] = a;
+			res.push_back(c / 2); res[i - 1] = (int)a;
 		}
 	}
 	 //calculate the least amount of tape used to join the papers together to make an A1-SIZE paper.
