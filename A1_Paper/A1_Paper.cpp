@@ -1,7 +1,7 @@
 // A1_Paper.cpp : Defines the entry point for the console application.
 //
 
-#include "stdafx.h"
+
 #include <iostream>
 #include <vector>
 #include <string>
@@ -50,8 +50,6 @@ int main()
 	//calculate area of the A1_SIZE paper
 	P_A_1.area = P_A_1.l * P_A_1.w;
 
-	printf("WIDTH_A_ONE: %f\n", WIDTH_A_2);
-	printf("LEN_A_ONE: %f\n", LEN_A_2);
 	//rest cin \n character from input buffer so getline to work
 	std::cin.ignore();
 	std::getline(std::cin, strline);
